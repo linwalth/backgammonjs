@@ -280,7 +280,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color:#333;
+  background-color:#000000;
 }
 
 .glyphicon {
@@ -420,18 +420,18 @@ body {
 
 /* Board style */
 .board {
-  /*background-color: #5E4733*/;
+  /*background-color: #000000;*/
   /*E8D1A5*/
-  /*background-color: #fff1dd;*/
-  background-color: #fff1dd;
+  /*background-color: #274758;*/
+  background-color: #274758;
 }
 
 .frame {
-  background-color: #5e4733;
+  background-color: #000000;
 }
 
 .bar {
-  background: #5e4733 url(../images/v-line.gif) repeat-y center center;
+  background: #000000 url(../images/v-line.gif) repeat-y center center;
 }
 
 .point.odd,
@@ -446,7 +446,7 @@ body {
 }
 
 .row0 .point.even {
-  /*background-color: #B58863;*/
+  /*background-color: FFFFF0;*/
   background-image: url(../images/row1-triangle-dark.gif);
 }
 
@@ -456,7 +456,7 @@ body {
 }
 
 .row1 .point.even {
-  /*background-color: #B58863;*/
+  /*background-color: FFFFF0;*/
   background-image: url(../images/row2-triangle-dark.gif);
 }
 

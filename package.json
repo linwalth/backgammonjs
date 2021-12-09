@@ -17,5 +17,8 @@
   },
   "devDependencies": {
     "jshint": "^2.9.4"
+  },
+  "dependencies": {
+    "express-basic-auth": "^1.2.0"
   }
 }

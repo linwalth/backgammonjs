@@ -10,6 +10,13 @@ var model = require('../../lib/model.js');
 var queue_manager = require('./queue_manager.js');
 require('../../lib/rules/rule.js');
 
+// basic auth and process env user/pass
+const basicAuth = require('express-basic-auth');
+const username = process.env.USER;
+const password = process.env.PASS;
+const users = {};
+users[username] = password;
+
 /**
  * Backgammon server.
  * Listens to socket for command messages and processes them.
@@ -140,7 +147,17 @@ function Server() {
     
     this.loadRules();
     
-    this.restoreServer();
+    this.restoreServer();   
+
+    if (username && password) {
+      expressServer.use(basicAuth({
+        users,
+        challenge: true, // <--- needed to actually show the login dialog!
+        unauthorizedResponse: {
+          message: 'Bad credentials',
+        },
+      }));
+    }
 
     expressServer.use(express.static(path.join(__dirname, '../browser')));
 
